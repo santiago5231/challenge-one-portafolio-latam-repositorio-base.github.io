@@ -1,0 +1,417 @@
+
+
+/*CSS Reset / Normalize*/
+/* Hemos disponibilizado el básico de reset de estilos. Si quieren, añadan más informaciones 
+en las secciones señaladas */
+/*Já deixaremos o básico de reset de estilos. Caso queira adicionar mais informações
+coloque nas sessões indicadas*/
+
+:root{
+    /* Inserta la variable de los otros colores inspeccionando el exemplo de figma */
+    /*Se esforce para trabalhar com variáveis, é uma dica profissional valiosa*/
+    --cor-de-fundo: #E3C39D;
+    --cor-de-link: #A68868;
+    --azul-oscuro: #154580;
+    --azul-medio: #3970BE;
+    
+}
+
+body {
+    font-family: Roboto, Arial, Helvetica, sans-serif;
+    
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    font-size: 14px;
+    color: white;
+    box-sizing: border-box;
+    text-align: center;
+    
+    
+}
+ol, ul,li {
+    list-style: none;
+}
+a{
+    text-decoration: none;
+    color: var(--cor-de-link);
+}
+
+/*En este desafío nosostros gustaríamos que ustedes intentaran utilizar la metodología BEM. 
+
+Lo que es el BEM?
+
+BEM (Bloque, Elemento, Modificador) es un enfoque basado en componentes para el 
+desarrollo web. La idea detrás de esto es dividir la interfaz de usuario en bloques
+independientes. Esto hace que el desarrollo de la interfaz sea fácil y rápido, incluso
+con una interfaz de usuario compleja, y permite la reutilización del código existente sin copiar y pegar.
+
+Enlace de la documentación oficial!
+https://en.bem.info/methodology/quick-start/*/
+
+/*Sección Menu*/
+
+section.menu{
+    display: flex;
+    justify-content: space-between;
+    
+    padding: 15px 75px 15px 130px;
+    white-space: nowrap; 
+    color: #3970BE;
+    background-color: #154580;
+}
+.menu__list{
+    display: flex;
+    padding: 15px;
+    align-items: center;
+    white-space: nowrap; 
+    gap: 15px;
+    color: #3970BE;
+    
+}
+header.menu {
+        display: flex;
+        justify-content: center; /* Centra el contenido horizontalmente */
+        align-items: center;  /* Centra el contenido verticalmente */
+        padding: 15px;
+        top: 15px;
+      
+      
+    
+}
+
+/*Sección Title*/
+
+section.title{
+    display: flex;
+    flex-direction:column;
+    margin-bottom: 10px;
+    
+}
+.menu__title{
+    display: flex;
+    padding: auto;
+    
+
+}
+
+.title__div{
+    /* display: inline-block;
+     /* Centra elementos horizontalmente */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+  }
+ 
+
+img.title__profile{
+    display: flex;
+    height: 350px;
+    width: 350px;
+    border-radius: 80%;
+    padding: 5% ;
+    margin: none;
+
+}
+
+
+  
+.title__bio,
+.title__subsection{
+  display: flex;
+  margin-right: 50px;
+  text-align: left;
+  padding: 10px 50px 20px;
+
+}
+h2.title__bio{
+  text-decoration: none;
+  padding: 10px 25% 10px 5%;
+}
+a.title__div:hover{
+  
+}
+ul.title__network{
+  display:flex;
+  padding: 10px 35% 30px 0;
+  
+}
+.title__network__item{
+  display:inline-flex;
+  padding: 10px;
+  justify-content: center;
+  white-space: nowrap;
+  margin: none;
+  
+
+}
+.title__container{
+  padding: 55px;
+  text-align: start;
+  display: flex;
+  flex-flow: column wrap;
+  color: #000000;
+  align-content: flex-end;
+  align-items: flex-end;
+}
+
+
+
+/*Sección About*/
+.about__container,
+.about__title,
+.about__paragraph {
+  display: block;
+  text-align: start;
+  color: #000000;
+  white-space: normal; /* Permite saltos de línea */
+  flex-wrap: wrap;    /* Permite que el texto fluya a la siguiente línea */
+}
+/*Sección skills*/
+
+.skills {
+    text-align: center; 
+    color: #000000;
+  }
+  
+  .skills__title {
+    margin-bottom: 5px;
+    padding: 75px 15px 5px 15px; 
+  }
+  
+  .skills__line {
+    display: flex; 
+    flex-wrap: wrap; 
+    justify-content: space-between;
+    padding: 75px; 
+  }
+  
+  .skills__box {
+    margin: 5px; 
+    text-align: center;
+    margin-right: 1rem; 
+    flex-shrink: 0; 
+    padding: 5px 15px 15px 15px; 
+  }
+  
+  .skills__img {
+    margin-bottom: 5px; 
+  }
+  
+  .skills__name {
+    font-weight: bold; 
+  }
+
+/*Sección Hobbies*/
+
+
+
+
+.hobbies {
+    text-align: center; 
+    color: #000000;
+  }
+  
+  .hobbies__title {
+    margin-bottom: 5px;
+    padding: 75px 15px 5px 15px; 
+  }
+  
+  .hobbies__line {
+    display: flex; 
+    flex-wrap: wrap; 
+    justify-content: space-between;
+    padding: 75px; 
+  }
+  
+  .hobbies__box {
+    margin: 5px; 
+    text-align: center;
+    margin-right: 1rem; 
+    flex-shrink: 0; 
+    padding: 5px 15px 15px 15px; 
+  }
+  
+  .hobbies__img {
+    margin-bottom: 5px; 
+  }
+  
+  .hobbies__name {
+    font-weight: bold; 
+  }
+    
+
+
+
+/* Experiencia Académica*/
+
+
+section.academic{
+        
+        background-color: #f5f5f5; /* Light gray background */
+        padding: 2em 0; /* Add some padding for spacing */
+      }
+      
+      .academic__title {
+        color: #000000;
+        text-align: center; /* Center the title */
+        font-size: 2em; /* Increase font size for emphasis */
+        margin-bottom: 1em; /* Add some space below the title */
+      }
+      
+      .academic__courses {
+        display: flex; /* Use a flexbox layout for better organization */
+        flex-wrap: wrap; /* Allow courses to wrap onto multiple lines if needed */
+        justify-content: center; /* Center the courses horizontally */
+        align-items: flex-start; /* Align courses vertically from the top */
+      }
+      
+      .academic__courses__box {
+        margin: 1em; /* Add space between each course box */
+        flex-basis: 25%; /* Set the width of each course box to 25% of the container */
+        background-color: white; /* White background for each box */
+        padding: 1em; /* Add some padding inside the boxes */
+        border-radius: 5px; /* Rounded corners for a softer look */
+        box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+      }
+      
+      .academic__courses__list {
+        list-style: none; /* Eliminar viñetas predeterminadas*/
+        padding: 0; /* Remove default list padding */
+      }
+      
+      .academic__courses__item__img {
+        display:flex;
+        flex-direction:row;
+        width: 100px; /* Set the width of the institution logo */
+        height: auto; /* Maintain aspect ratio */
+        margin-bottom: 1em;
+       /* box-shadow: 15px 15px 15px 15px rgb(0,0,0,5); /* Add some space below the logo */
+      }
+      
+      .academic__courses__item__title {
+        font-weight: bold; /* Make the title bolder */
+        margin-bottom: 0.5em; /* Add some space below the title */
+      }
+      
+      .academic__courses__item__subtitle {
+        font-size: 0.8em; /* Reduce subtitle font size */
+        color: #666; /* Lighter color for subtitle */
+      }
+      
+
+
+/* experiencia*/
+
+section.experience{
+  
+    background-color: #fff; /* White background */
+    padding: 2em 0; /* Add some padding for spacing */
+  }
+  
+  .experience__section__title {
+    text-align: center; /* Center the title */
+    font-size: 2em; /* Increase font size for emphasis */
+    margin-bottom: 1em; /* Add some space below the title */
+  }
+  
+  .experiencie__box {
+    display: flex; /* Use a flexbox layout for better organization */
+    flex-wrap: wrap; /* Allow projects to wrap onto multiple lines if needed */
+    justify-content: center; /* Center the projects horizontally */
+    align-items: flex-start; /* Align projects vertically from the top */
+    margin-bottom: 2em; /* Add space between each project box */
+  }
+  
+  .experience__img {
+    width: 300px; /* Set the width of the project image */
+    height: auto; /* Maintain aspect ratio */
+    margin-right: 1em; /* Add space between the image and the information */
+  }
+  
+  .experience__info-container {
+    flex: 1; /* Allow the info container to take up the remaining space */
+  }
+  
+  .experience__title {
+    font-size: 1.5em; /* Increase font size for title */
+    margin-bottom: 0.5em; /* Add some space below the title */
+  }
+  
+  .experience__text {
+    font-size: 0.9em; /* Smaller font size for text */
+    margin-bottom: 0.5em; /* Add some space below the text */
+  }
+  
+  .experience__description {
+    display: flex; /* Use a flexbox layout for buttons */
+    justify-content: space-between; /* Distribute buttons evenly */
+  }
+  
+  .experience__repo, .experience__demo {
+    display: inline-block; /* Make buttons display inline */
+    margin: 0.5em; /* Add some space between buttons */
+  }
+  
+  
+
+
+/*Contacto*/
+
+section.formcontato{
+
+}
+
+/*footeer*/
+
+section.footer{
+
+}
+
+/* Vamos a desafiarnos trabajando con responsividad?
+Utiliza las referencias de los breakpoints @media abajo */
+
+
+/*Tablet*/
+@media (min-width: 768px) {
+
+/* Menú */
+
+/*title*/
+
+/*Skills*/
+
+/*Hobbies*/
+
+/*Formación Académica*/
+
+/*Experiencia Profesional*/
+
+}
+
+/*Mobile*/
+@media (min-width: 425px) {
+
+/*Menu*/
+
+
+
+/*Titulo*/
+
+/*Sección sobre mi*/
+
+/*Skills*/
+
+/*Hobbies*/
+ 
+/*Formación Académica*/
+
+/*Experiencia Profesional*/
+
+ /*Contacto*/
+
+/*Footer*/
+
+}
