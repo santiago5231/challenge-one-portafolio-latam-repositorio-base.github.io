@@ -1,5 +1,6 @@
 
 
+
 /*CSS Reset / Normalize*/
 /* Hemos disponibilizado el básico de reset de estilos. Si quieren, añadan más informaciones 
 en las secciones señaladas */
@@ -16,9 +17,10 @@ coloque nas sessões indicadas*/
     
 }
 
-body {
+#Portafolio {
     font-family: Roboto, Arial, Helvetica, sans-serif;
-    
+    min-width: auto;
+    max-width: auto;
     position: relative;
     width: 100%;
     height: 100%;
@@ -35,7 +37,7 @@ ol, ul,li {
 }
 a{
     text-decoration: none;
-    color: var(--cor-de-link);
+    color: var(--cor-delink);
 }
 
 /*En este desafío nosostros gustaríamos que ustedes intentaran utilizar la metodología BEM. 
@@ -55,11 +57,13 @@ https://en.bem.info/methodology/quick-start/*/
 section.menu{
     display: flex;
     justify-content: space-between;
-    
-    padding: 15px 75px 15px 130px;
+    height: 75px;
+    width: auto;
+    bottom: 0%;
+    padding: 15px 95px 15px 130px;
     white-space: nowrap; 
-    color: #3970BE;
-    background-color: #154580;
+    color: var(--cor-de-fundo);
+    background-color: #333;
 }
 .menu__list{
     display: flex;
@@ -67,7 +71,7 @@ section.menu{
     align-items: center;
     white-space: nowrap; 
     gap: 15px;
-    color: #3970BE;
+    color: #E3C39D;
     
 }
 header.menu {
@@ -157,6 +161,43 @@ ul.title__network{
   align-items: flex-end;
 }
 
+#generatePDFButton{
+  color: var(--cor-de-link);
+  border: 2px solid rgb(152, 162, 9);
+  border-radius: 15px;
+  padding: 18px 36px;
+  display: inline-block;
+  font-family: Roboto, Arial, Helvetica, sans-serif;;
+  font-size: 14px;
+  letter-spacing: 1px;
+  cursor: pointer;
+  box-shadow: inset 0 0 0 0 #3f1f90;
+  -webkit-transition: ease-out 0.4s;
+  -moz-transition: ease-out 0.4s;
+  transition: ease-out 0.8s;
+}
+
+#generatePDFButton:hover{
+  box-shadow: inset 0 100px 0 0 #c3d802;
+}
+
+.slide_right:hover {
+  box-shadow: inset 400px 0 0 0 #d802bf;
+}
+
+.slide_left:hover {
+  box-shadow: inset 0 0 0 50px #0266d8;
+}
+
+.slide_diagonal:hover {
+  box-shadow: inset 400px 50px 0 0 #02d89b;
+}
+
+#generatePDFButton {
+  width: 150px;
+  margin: 50px auto 0 auto;
+  text-align: center;
+ }
 
 
 /*Sección About*/
@@ -250,31 +291,31 @@ ul.title__network{
 
 section.academic{
         
-        background-color: #f5f5f5; /* Light gray background */
-        padding: 2em 0; /* Add some padding for spacing */
+        background-color: #f5f5f5; /* Fondo gris claro*/
+        padding: 2em 0; /* Agrega algo de relleno para el espaciado */
       }
       
       .academic__title {
         color: #000000;
-        text-align: center; /* Center the title */
-        font-size: 2em; /* Increase font size for emphasis */
-        margin-bottom: 1em; /* Add some space below the title */
+        text-align: center; /* Centra el título*/
+        font-size: 2em; /* Aumentar el tamaño de fuente para dar énfasis */
+        margin-bottom: 1em; /*Añade algo de espacio debajo del título */
       }
       
       .academic__courses {
-        display: flex; /* Use a flexbox layout for better organization */
-        flex-wrap: wrap; /* Allow courses to wrap onto multiple lines if needed */
-        justify-content: center; /* Center the courses horizontally */
-        align-items: flex-start; /* Align courses vertically from the top */
+        display: flex; /* diseño de caja flexible para una mejor organización */
+        flex-wrap: wrap; /*Permitir que los cursos se ajusten a varias líneas si es necesario */
+        justify-content: center; /* Centrar los cursos horizontalmente*/
+        align-items: flex-start; /* Alinear cursos verticalmente desde arriba */
       }
       
       .academic__courses__box {
-        margin: 1em; /* Add space between each course box */
-        flex-basis: 25%; /* Set the width of each course box to 25% of the container */
-        background-color: white; /* White background for each box */
-        padding: 1em; /* Add some padding inside the boxes */
-        border-radius: 5px; /* Rounded corners for a softer look */
-        box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+        margin: 1em; /* Agregar espacio entre cada cuadro de curso*/
+        flex-basis: 25%; /* Establece el ancho de cada cuadro de curso al 25% del contenedor */
+        background-color: white; /*Fondo blanco para cada cuadro*/
+        padding: 1em; /*Agrega algo de relleno dentro de las cajas*/
+        border-radius: 5px; /* Esquinas redondeadas para una apariencia más suave*/
+        box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1); /* Añade una sombra sutil*/
       }
       
       .academic__courses__list {
@@ -308,7 +349,7 @@ section.academic{
 section.experience{
   
     background-color: #fff; /* White background */
-    padding: 2em 0; /* Add some padding for spacing */
+    padding: 0; /* Add some padding for spacing */
   }
   
   .experience__section__title {
@@ -360,36 +401,192 @@ section.experience{
 
 /*Contacto*/
 
-section.formcontato{
+section.formcontato {
+  background-color: #f0f0f0; /* Light gray background */
+  padding: 50px 0; /* Top and bottom padding */
+  display: flex; /* Arrange contact info and form side-by-side */
+  justify-content: space-between;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);  /* Space elements horizontally */
+}
 
+.formcontato__contacto {
+  display: flex; /* Arrange image and text container within contact section */
+  width: 40%; /* Allocate 40% of the space for contact info */
+}
+
+.formcontato__img {
+  width: 100%; /* Set the image width to fill the container */
+  height: auto; /* Maintain aspect ratio */
+  margin-bottom: 20px;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);  /* Add spacing below the image */
+}
+
+.formcontato__text {
+  width: 100%; /* Set the text container width to fill the remaining space */
+}
+
+.formcontato__title {
+  font-size: 2em; /* Increase font size for title */
+  margin-bottom: 1em;
+  color: var(--cor-de-fundo);
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);  /* Add space below the title */
+}
+
+.formcontato__subtext {
+  font-size: 1.2em; /* Set a smaller size for subtitle */
+  margin-bottom: 1em;
+  color:rgb(106, 115, 115);
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1); 
+  
+}
+
+.formcontato__form {
+  display: flex; /* Arrange form elements in a row */
+  flex-direction: column; /* Stack elements vertically */
+  width: 100%; /* Make the form fill the container width */
+}
+
+.formcontato__input,
+.formcontato__textarea {
+  padding: 10px; /* Add padding to input and textarea */
+  margin-bottom: 15px; /* Add space between form elements */
+  border: 1px solid #ccc; /* Add a thin border */
+  border-radius: 5px;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);  /* Rounded corners for a softer look */
+}
+
+.formcontato__textarea {
+  resize: vertical; /* Allow users to resize the textarea vertically */
+}
+
+.formcontato__botao {
+  background-color: #333; /* Set button background color */
+  color: var(--cor-de-fundo); /* Set button text color */
+  padding: 10px 20px; /* Add padding to button */
+  border: none; /* Remove default button border */
+  border-radius: 5px; /* Rounded corners for button */
+  cursor: pointer; /* Indicate clickable element */
+}
+
+.formcontato__botao:hover {
+  background-color: #444; /* Change button background color on hover */
 }
 
 /*footeer*/
 
-section.footer{
 
-}
+
+  section.footer {
+    height: 100%;
+    background-color: #333; /* Dark gray background */
+    color: #fff; /* Set text color to white */
+    padding: 20px 0; /* Top and bottom padding */
+    text-align: center; /* Center footer content */
+  }
+  
+  .footer__rodape {
+    margin: 0 auto; /* Center the footer content horizontally */
+    width: 50%; /* Set a maximum width for the footer content */
+  }
+  
+  .footer__rodape p {
+    margin-bottom: 10px; /* Add space between paragraphs */
+    font-size: 0.8em; /* Smaller font size for footer text */
+  }
+
 
 /* Vamos a desafiarnos trabajando con responsividad?
 Utiliza las referencias de los breakpoints @media abajo */
 
 
 /*Tablet*/
-@media (min-width: 768px) {
+@media screen and (min-width: 768px) and (max-width: 874px) {
 
-/* Menú */
+  /* Sección Menu */
+  .menu__list {
+    flex-direction: column; /* Stack menu items vertically */
+    align-items: flex-start;  /* Align items to the left */
+    gap: 10px;  /* Adjust spacing between items */
+  }
 
-/*title*/
+  /* Sección Title */
+  .title__container {
+    padding: 0px;
+    flex-direction: row;  /* Arrange profile image and bio side-by-side */
+    justify-content: space-between; /* Distribute content horizontally */
+    align-items: center;  /* Align content vertically */
+  }
 
-/*Skills*/
+  .title__div {
+    width: 50%;  /* Allocate half of the space for the profile image */
+  }
 
-/*Hobbies*/
+  img.title__profile {
+    padding: 0px, 35px;
+    width: 200px;  /* Adjust profile image size for tablets */
+    height: 200px;  /* Adjust profile image size for tablets */
+  }
 
-/*Formación Académica*/
+  .title__bio,
+  .title__subsection {
+    width: 50%;  /* Allocate half of the space for bio and network */
+    margin-right: 0;  /* Remove right margin for side-by-side layout */
+    padding: 20px;   /* Adjust padding for better readability */
+  }
 
-/*Experiencia Profesional*/
+  /* Sección Skills & Hobbies (similar adjustments) */
+  .skills__line,
+  .hobbies__line {
+    flex-wrap: wrap;  /* Wrap skills/hobbies on multiple lines if needed */
+  }
 
+  .skills__box,
+  .hobbies__box {
+    margin: 10px;  /* Adjust margin for spacing */
+  }
+
+  /* Sección Academic Formation */
+  .academic__courses {
+    flex-direction: row;  /* Arrange courses side-by-side */
+    flex-wrap: wrap;  /* Wrap courses on multiple lines if needed */
+    justify-content: space-between; /* Distribute courses evenly */
+  }
+
+  .academic__courses__box {
+    flex-basis: 40%;  /* Allocate more space for each course container */
+    margin: 15px;  /* Adjust margin for spacing */
+  }
+
+  /* Sección Experience */
+  .experiencie__box {
+    flex-direction: row;  /* Arrange image and info side-by-side */
+  }
+
+  .experience__img {
+    width: 250px;  /* Adjust image size for tablets */
+    margin-right: 20px;  /* Adjust margin for spacing */
+  }
+
+  .experience__info-container {
+    flex: 1;  /* Allocate remaining space for info */
+  }
+
+  /* Sección Contacto */
+  .formcontato {
+    flex-direction: column;  /* Stack contact form and image vertically */
+    align-items: center;  /* Center content horizontally */
+  }
+
+  .formcontato__contacto,
+  .formcontato__form {
+    width: 100%;  /* Make form and image take full width */
+  }
+
+  .formcontato__img {
+    margin-bottom: 30px;  /* Adjust margin for spacing */
+  }
 }
+
 
 /*Mobile*/
 @media (min-width: 425px) {
