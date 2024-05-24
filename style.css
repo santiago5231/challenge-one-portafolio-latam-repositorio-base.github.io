@@ -1,6 +1,12 @@
 
-
-
+*{
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+  list-style: none;
+  box-sizing: border-box;
+  
+}
 /*CSS Reset / Normalize*/
 /* Hemos disponibilizado el básico de reset de estilos. Si quieren, añadan más informaciones 
 en las secciones señaladas */
@@ -17,7 +23,7 @@ coloque nas sessões indicadas*/
     
 }
 
-#Portafolio {
+body {
     font-family: Roboto, Arial, Helvetica, sans-serif;
     min-width: auto;
     max-width: auto;
@@ -85,6 +91,8 @@ header.menu {
     
 }
 
+
+
 /*Sección Title*/
 
 section.title{
@@ -115,7 +123,7 @@ img.title__profile{
     height: 350px;
     width: 350px;
     border-radius: 80%;
-    padding: 5% ;
+    padding: 1% ;
     margin: none;
 
 }
@@ -163,12 +171,16 @@ ul.title__network{
 
 #generatePDFButton{
   color: var(--cor-de-link);
-  border: 2px solid rgb(152, 162, 9);
+  border: 1px solid rgb(152, 162, 9);
   border-radius: 15px;
-  padding: 18px 36px;
-  display: inline-block;
+  padding: 5px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-evenly;
+  align-items: stretch;
   font-family: Roboto, Arial, Helvetica, sans-serif;;
-  font-size: 14px;
+  font-size: 10px;
   letter-spacing: 1px;
   cursor: pointer;
   box-shadow: inset 0 0 0 0 #3f1f90;
@@ -194,21 +206,27 @@ ul.title__network{
 }
 
 #generatePDFButton {
-  width: 150px;
-  margin: 50px auto 0 auto;
+  width: 100px;
+  margin:  0;
   text-align: center;
  }
 
 
 /*Sección About*/
+.section_about{
+
+}
 .about__container,
-.about__title,
-.about__paragraph {
+.about__title
+ {
   display: block;
   text-align: start;
   color: #000000;
   white-space: normal; /* Permite saltos de línea */
   flex-wrap: wrap;    /* Permite que el texto fluya a la siguiente línea */
+}
+.about__paragraph{
+  display: contents;
 }
 /*Sección skills*/
 
@@ -400,7 +418,13 @@ section.experience{
 
 
 /*Contacto*/
+#contacto{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1); 
 
+}
 section.formcontato {
   background-color: #f0f0f0; /* Light gray background */
   padding: 50px 0; /* Top and bottom padding */
@@ -414,29 +438,26 @@ section.formcontato {
   width: 40%; /* Allocate 40% of the space for contact info */
 }
 
-.formcontato__img {
-  width: 100%; /* Set the image width to fill the container */
-  height: auto; /* Maintain aspect ratio */
-  margin-bottom: 20px;
-  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);  /* Add spacing below the image */
-}
+
 
 .formcontato__text {
   width: 100%; /* Set the text container width to fill the remaining space */
+  box-shadow:   2px 2px 5px rgba(0, 0, 1, 0.1); 
+  border-radius: 2%;
+  padding: 0%;
+
 }
 
 .formcontato__title {
   font-size: 2em; /* Increase font size for title */
   margin-bottom: 1em;
   color: var(--cor-de-fundo);
-  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);  /* Add space below the title */
 }
 
 .formcontato__subtext {
   font-size: 1.2em; /* Set a smaller size for subtitle */
   margin-bottom: 1em;
   color:rgb(106, 115, 115);
-  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1); 
   
 }
 
@@ -500,115 +521,319 @@ Utiliza las referencias de los breakpoints @media abajo */
 
 
 /*Tablet*/
-@media screen and (min-width: 768px) and (max-width: 874px) {
-
+@media screen and (min-width: 768px) and (max-width: 1024px) {
   /* Sección Menu */
-  .menu__list {
-    flex-direction: column; /* Stack menu items vertically */
-    align-items: flex-start;  /* Align items to the left */
-    gap: 10px;  /* Adjust spacing between items */
+  #Portafolio {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    
+    
+  }
+  
+  a ,h2,h3,h4{
+    color: #333;
+    text-decoration: none;
+    padding: 0;
+    margin: 0;
+  }
+  .tudo{
+    width: auto;
   }
 
-  /* Sección Title */
-  .title__container {
-    padding: 0px;
-    flex-direction: row;  /* Arrange profile image and bio side-by-side */
-    justify-content: space-between; /* Distribute content horizontally */
-    align-items: center;  /* Align content vertically */
+ .menu_list{
+  color: var(--cor-de-fundo);
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 15px;
+    
   }
-
-  .title__div {
-    width: 50%;  /* Allocate half of the space for the profile image */
-  }
-
+  
   img.title__profile {
-    padding: 0px, 35px;
-    width: 200px;  /* Adjust profile image size for tablets */
-    height: 200px;  /* Adjust profile image size for tablets */
+    
+    display: block;
+    direction: none;
+    padding: 0;
+    margin: 0;
   }
-
-  .title__bio,
+  .title__bio{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  #generatePDFButton{
+    display: flex;
+    max-width: 5%;
+    height: auto;
+    padding: 0%;
+    text-align: end;
+  }
+  /* Header */
+  header {
+    
+    padding: 20px 0;
+    text-align: center;
+  }
+  
+  .header__logo {
+    display: inline-block;
+    margin-right: 20px;
+  }
+  
+  .header__logo img {
+    width: 100px;
+    height: auto;
+  }
+  
+  .header__menu {
+    display: inline-block;
+  }
+  
+  .header__menu ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .header__menu li {
+    display: inline-block;
+    margin-right: 20px;
+  }
+  
+  /* Hero Section */
+ 
+  .title__container{
+    text-align: start;
+    font-size: 15px;
+    font-weight: bold;
+    padding: 0%;
+    margin: 0%;
+  }
+  
   .title__subsection {
-    width: 50%;  /* Allocate half of the space for bio and network */
-    margin-right: 0;  /* Remove right margin for side-by-side layout */
-    padding: 20px;   /* Adjust padding for better readability */
+    font-size: 0%;
   }
-
-  /* Sección Skills & Hobbies (similar adjustments) */
-  .skills__line,
+  
+  /* About Section */
+  .about {
+    padding: 20px;
+  }
+  
+  .about__title {
+    font-size: 30px;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+  
+  .about__text {
+    font-size: 16px;
+    line-height: 1.5;
+  }
+  
+  /* Skills Section */
+  .skills {
+    padding: 20px;
+  }
+  
+  .skills__title {
+    font-size: 30px;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+  
+  .skills__line {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 15px;
+  }
+  
+  .skills__box {
+    background-color: #fff;
+    padding: 10px;
+    margin-right: 10px;
+    border-radius: 5px;
+    text-align: center;
+  }
+  
+  .skills__box h4 {
+    font-size: 18px;
+    margin-bottom: 5px;
+  }
+  
+  /* Hobbies Section */
+  .hobbies {
+    padding: 20px;
+  }
+  
+  .hobbies__title {
+    font-size: 30px;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+  
   .hobbies__line {
-    flex-wrap: wrap;  /* Wrap skills/hobbies on multiple lines if needed */
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 15px;
   }
-
-  .skills__box,
+  
   .hobbies__box {
-    margin: 10px;  /* Adjust margin for spacing */
+    
+    padding: 10px;
+    margin-right: 10px;
+    border-radius: 5px;
+    text-align: center;
   }
-
-  /* Sección Academic Formation */
+  
+  .hobbies__box h4 {
+    font-size: 18px;
+    margin-bottom: 5px;
+  }
+  
+  /* Academic Formation Section */
+  .academic {
+    display: flex;
+    flex-direction: column;
+    font-family: 20px;
+  }
+  
+  .academic__title {
+    font-size: 30px;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+  
   .academic__courses {
-    flex-direction: row;  /* Arrange courses side-by-side */
-    flex-wrap: wrap;  /* Wrap courses on multiple lines if needed */
-    justify-content: space-between; /* Distribute courses evenly */
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+    flex-wrap: wrap;
+    justify-content: space-between;
   }
-
+  
   .academic__courses__box {
-    flex-basis: 40%;  /* Allocate more space for each course container */
-    margin: 15px;  /* Adjust margin for spacing */
-  }
-
-  /* Sección Experience */
-  .experiencie__box {
-    flex-direction: row;  /* Arrange image and info side-by-side */
-  }
-
-  .experience__img {
-    width: 250px;  /* Adjust image size for tablets */
-    margin-right: 20px;  /* Adjust margin for spacing */
-  }
-
-  .experience__info-container {
-    flex: 1;  /* Allocate remaining space for info */
-  }
-
-  /* Sección Contacto */
-  .formcontato {
-    flex-direction: column;  /* Stack contact form and image vertically */
-    align-items: center;  /* Center content horizontally */
-  }
-
-  .formcontato__contacto,
-  .formcontato__form {
-    width: 100%;  /* Make form and image take full width */
-  }
-
-  .formcontato__img {
-    margin-bottom: 30px;  /* Adjust margin for spacing */
-  }
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    flex-wrap: nowrap;
+    align-content: space-around;
+    align-items: baseline;
+    justify-content: space-evenly;
+    margin: 5px;
+    padding: 100px;
+    align-items: center;
+}
+}
+.formcontato__text{
+  text-decoration: none;
+  box-shadow:none;
 }
 
 
 /*Mobile*/
-@media (min-width: 425px) {
-
+@media screen and (min-width: 425px) and(max-width:768) {
+  body {
+    font-size: 16px; /* Base font size */
+  }
+  
+  h1
 /*Menu*/
+.menu__list{
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 15px;
+}
 
 
 
 /*Titulo*/
+.header_menu {
+  display: none; /* Hide the original menu */
+}
+.section_menu{
+  width: 100%;
+  
+
+}
+
+.menu-button {
+  display: block; /* Show the menu button */
+  width: 30px;
+  height: 30px;
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  line-height: 30px;
+  cursor: pointer;
+}
+.title_container {
+  flex-direction: row; /* Arrange profile image and bio side-by-side */
+}
+
+.title_div {
+  width: 45%; /* Allocate more space for the profile image */
+}
+
+img.title_profile {
+  width: 180px;
+  height: 180px; /* Adjust profile image size */
+}
+
+.title_bio,
+.title_subsection {
+  width: 50%; /* Allocate half of the space for bio and network sections */
+  margin-right: 0; /* Remove right margin for a clean layout */
+  padding: 20px; /* Adjust padding for better readability */
+}
 
 /*Sección sobre mi*/
 
-/*Skills*/
+/*Skills*//*Hobbies*/
+.skills__line,
+.hobbies__line {
+  flex-wrap: wrap; /* Wrap skills/hobbies onto multiple lines if needed */
+}
 
-/*Hobbies*/
+.skills__box,
+.hobbies__box {
+  margin: 10px; /* Increase spacing between skills/hobbies boxes */
+}
+
  
 /*Formación Académica*/
+.academic__courses {
+  flex-direction: row; /* Arrange courses side-by-side */
+}
+
+.academic__courses__box {
+  flex-basis: 45%; /* Allocate more space for each course container */
+  margin: 15px; /* Adjust margin for spacing */
+}
 
 /*Experiencia Profesional*/
+.experiencie__box {
+  flex-direction: row; /* Arrange project image and information side-by-side */
+}
+
+.experience__img {
+  width: 220px; /* Adjust image size for tablets */
+  margin-right: 20px; /* Increase spacing between image and info */
+}
 
  /*Contacto*/
+ .formcontato {
+  flex-direction: column; /* Stack contact form and image vertically */
+}
 
+.formcontato__contacto,
+.formcontato__form {
+  width: 100%; /* Make form and image take full width */
+}
+
+.formcontato__img {
+  margin-bottom: 30px; /* Adjust margin for spacing between image and form */
+}
 /*Footer*/
 
 }
