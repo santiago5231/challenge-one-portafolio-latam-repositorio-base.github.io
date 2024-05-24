@@ -1,4 +1,4 @@
-document.querySelector('.formcontato__text').addEventListener('submit', function(event) {
+document.querySelector('formcontato__text').addEventListener('submit', function(event) {
     event.preventDefault(); // Evita el envío normal del formulario
     // Aquí puedes agregar código para validar el formulario si es necesario
 
