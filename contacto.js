@@ -8,6 +8,6 @@ document.querySelector('formcontato__text').addEventListener('submit', function(
         body: new FormData(event.target) // event.target es el formulario
     }).then(function() {
         // Después de enviar el formulario, redirige al usuario
-        window.location.href = 'https://github.com/santiago5231/challenge-one-portafolio-latam-repositorio-base.github.io.git';
+        window.location.href = 'https://santiago5231.github.io/challenge-one-portafolio-latam-repositorio-base.github.io/';
     });
 });
