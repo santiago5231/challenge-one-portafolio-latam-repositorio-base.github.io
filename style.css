@@ -1,839 +1,431 @@
-
-*{
+/* Reset / Normalize */
+* {
   padding: 0;
   margin: 0;
   text-decoration: none;
   list-style: none;
   box-sizing: border-box;
-  
 }
-/*CSS Reset / Normalize*/
-/* Hemos disponibilizado el básico de reset de estilos. Si quieren, añadan más informaciones 
-en las secciones señaladas */
-/*Já deixaremos o básico de reset de estilos. Caso queira adicionar mais informações
-coloque nas sessões indicadas*/
 
-:root{
-    /* Inserta la variable de los otros colores inspeccionando el exemplo de figma */
-    /*Se esforce para trabalhar com variáveis, é uma dica profissional valiosa*/
-    --cor-de-fundo: #E3C39D;
-    --cor-de-link: #A68868;
-    --azul-oscuro: #154580;
-    --azul-medio: #3970BE;
-    
+:root {
+  --color-background: #E3C39D;
+  --color-link: #A68868;
+  --color-dark-blue: #154580;
+  --color-medium-blue: #3970BE;
+  --color-text: #000000;
+  --color-background-section: #f5f5f5;
+  --color-button-background: #333;
+  --color-button-text: #E3C39D;
 }
 
 body {
-    font-family: Roboto, Arial, Helvetica, sans-serif;
-    min-width: auto;
-    max-width: auto;
-    position: relative;
-    width: 100%;
-    height: 100%;
-    overflow: auto;
-    font-size: 14px;
-    color: white;
-    box-sizing: border-box;
-    text-align: center;
-    
-    
-}
-ol, ul,li {
-    list-style: none;
-}
-a{
-    text-decoration: none;
-    color: var(--cor-delink);
-}
-
-/*En este desafío nosostros gustaríamos que ustedes intentaran utilizar la metodología BEM. 
-
-Lo que es el BEM?
-
-BEM (Bloque, Elemento, Modificador) es un enfoque basado en componentes para el 
-desarrollo web. La idea detrás de esto es dividir la interfaz de usuario en bloques
-independientes. Esto hace que el desarrollo de la interfaz sea fácil y rápido, incluso
-con una interfaz de usuario compleja, y permite la reutilización del código existente sin copiar y pegar.
-
-Enlace de la documentación oficial!
-https://en.bem.info/methodology/quick-start/*/
-
-/*Sección Menu*/
-
-section.menu{
-    display: flex;
-    justify-content: space-between;
-    height: 75px;
-    width: auto;
-    bottom: 0%;
-    padding: 15px 95px 15px 130px;
-    white-space: nowrap; 
-    color: var(--cor-de-fundo);
-    background-color: #333;
-}
-.menu__list{
-    display: flex;
-    padding: 15px;
-    align-items: center;
-    white-space: nowrap; 
-    gap: 15px;
-    color: #E3C39D;
-    
-}
-header.menu {
-        display: flex;
-        justify-content: center; /* Centra el contenido horizontalmente */
-        align-items: center;  /* Centra el contenido verticalmente */
-        padding: 15px;
-        top: 15px;
-      
-      
-    
-}
-
-
-
-/*Sección Title*/
-
-section.title{
-    display: flex;
-    flex-direction:column;
-    margin-bottom: 10px;
-    
-}
-.menu__title{
-    display: flex;
-    padding: auto;
-    
-
-}
-
-.title__div{
-    /* display: inline-block;
-     /* Centra elementos horizontalmente */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    
-  }
- 
-
-img.title__profile{
-    display: flex;
-    height: 350px;
-    width: 350px;
-    border-radius: 80%;
-    padding: 1% ;
-    margin: none;
-
-}
-
-
+  font-family: 'Roboto', Arial, Helvetica, sans-serif;
+  width: 100%;
+  min-height: 100%;
+  overflow: auto;
+  font-size: 14px;
+  color: var(--color-text);
   
-.title__bio,
-.title__subsection{
-  display: flex;
-  margin-right: 50px;
-  text-align: left;
-  padding: 10px 50px 20px;
-
+  text-align: center;
 }
-h2.title__bio{
+
+a {
   text-decoration: none;
-  padding: 10px 25% 10px 5%;
+  color: var(--color-link);
 }
-a.title__div:hover{
-  
+
+section.menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 75px;
+  padding: 15px 95px;
+  background-color: #333;
+  color: var(--color-background);
 }
-ul.title__network{
-  display:flex;
-  padding: 10px 35% 30px 0;
-  
+
+.menu__list {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  color: var(--color-background);
 }
-.title__network__item{
-  display:inline-flex;
+
+.menu__item {
+  padding: 15px;
+}
+
+/* Title Section */
+section.title {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.title__profile {
+  height: 350px;
+  width: 350px;
+  border-radius: 50%;
+  padding: 1.2%;
+}
+
+.title__bio,
+.title__subsection {
+  text-align: left;
+  padding: 10px 50px;
+}
+
+.title__network {
+  display: flex;
+  gap: 15px;
+  align-content: space-around;
+  padding: 35px;
+  flex-wrap: nowrap;
+  justify-content: center;
+}
+
+
+.title__network__item {
+  display: inline-flex;
   padding: 10px;
   justify-content: center;
   white-space: nowrap;
-  margin: none;
-  
-
-}
-.title__container{
-  padding: 55px;
-  text-align: start;
-  display: flex;
-  flex-flow: column wrap;
-  color: #000000;
-  align-content: flex-end;
-  align-items: flex-end;
-}
-
-#generatePDFButton{
-  color: var(--cor-de-link);
+  color: var(--color-link);
   border: 1px solid rgb(152, 162, 9);
   border-radius: 15px;
-  padding: 5px;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
-  justify-content: space-evenly;
-  align-items: stretch;
-  font-family: Roboto, Arial, Helvetica, sans-serif;;
-  font-size: 10px;
-  letter-spacing: 1px;
-  cursor: pointer;
   box-shadow: inset 0 0 0 0 #3f1f90;
-  -webkit-transition: ease-out 0.4s;
-  -moz-transition: ease-out 0.4s;
-  transition: ease-out 0.8s;
+  transition: ease-out 0.4s;
 }
 
-#generatePDFButton:hover{
+.title__network__item:hover {
   box-shadow: inset 0 100px 0 0 #c3d802;
 }
 
-.slide_right:hover {
-  box-shadow: inset 400px 0 0 0 #d802bf;
+/* About Section */
+.section_about {
+  padding: 50px 0;
 }
 
-.slide_left:hover {
-  box-shadow: inset 0 0 0 50px #0266d8;
-}
-
-.slide_diagonal:hover {
-  box-shadow: inset 400px 50px 0 0 #02d89b;
-}
-
-#generatePDFButton {
-  width: 100px;
-  margin:  0;
-  text-align: center;
- }
-
-
-/*Sección About*/
-.section_about{
-
-}
 .about__container,
 .about__title
- {
-  display: block;
-  text-align: start;
-  color: #000000;
-  white-space: normal; /* Permite saltos de línea */
-  flex-wrap: wrap;    /* Permite que el texto fluya a la siguiente línea */
+{
+  
+    display: inline-grid;
+    text-align: start;
+    color: #000000;
+    white-space: normal;
+    flex-wrap: wrap;
+    align-content: stretch;
+    justify-items: center;
+    justify-content: space-around;
+    align-items: baseline;
+    gap: 5%;
+
+  
+  
+  /* Permite que el texto fluya a la siguiente línea */
 }
 .about__paragraph{
   display: contents;
 }
-/*Sección skills*/
 
+.about__paragraph {
+  display: block;
+}
+
+/* Skills Section */
 .skills {
-    text-align: center; 
-    color: #000000;
-  }
-  
-  .skills__title {
-    margin-bottom: 5px;
-    padding: 75px 15px 5px 15px; 
-  }
-  
-  .skills__line {
-    display: flex; 
-    flex-wrap: wrap; 
-    justify-content: space-between;
-    padding: 75px; 
-  }
-  
-  .skills__box {
-    margin: 5px; 
-    text-align: center;
-    margin-right: 1rem; 
-    flex-shrink: 0; 
-    padding: 5px 15px 15px 15px; 
-  }
-  
-  .skills__img {
-    margin-bottom: 5px; 
-  }
-  
-  .skills__name {
-    font-weight: bold; 
-  }
+  text-align: center;
+  color: var(--color-text);
+}
 
-/*Sección Hobbies*/
+.skills__title {
+  margin-bottom: 5px;
+  padding: 75px 15px 5px;
+}
 
+.skills__line {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 75px;
+}
 
+.skills__box {
+  margin: 5px;
+  text-align: center;
+  padding: 15px;
+}
 
+.skills__img {
+  margin-bottom: 5px;
+}
 
+.skills__name {
+  font-weight: bold;
+}
+
+/* Hobbies Section */
 .hobbies {
-    text-align: center; 
-    color: #000000;
-  }
-  
-  .hobbies__title {
-    margin-bottom: 5px;
-    padding: 75px 15px 5px 15px; 
-  }
-  
-  .hobbies__line {
-    display: flex; 
-    flex-wrap: wrap; 
-    justify-content: space-between;
-    padding: 75px; 
-  }
-  
-  .hobbies__box {
-    margin: 5px; 
-    text-align: center;
-    margin-right: 1rem; 
-    flex-shrink: 0; 
-    padding: 5px 15px 15px 15px; 
-  }
-  
-  .hobbies__img {
-    margin-bottom: 5px; 
-  }
-  
-  .hobbies__name {
-    font-weight: bold; 
-  }
-    
+  text-align: center;
+  color: var(--color-text);
+}
 
+.hobbies__title {
+  margin-bottom: 5px;
+  padding: 75px 15px 5px;
+}
 
+.hobbies__line {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 75px;
+}
 
-/* Experiencia Académica*/
+.hobbies__box {
+  margin: 5px;
+  text-align: center;
+  padding: 15px;
+}
 
+.hobbies__img {
+  margin-bottom: 5px;
+}
 
-section.academic{
-        
-        background-color: #f5f5f5; /* Fondo gris claro*/
-        padding: 2em 0; /* Agrega algo de relleno para el espaciado */
-      }
-      
-      .academic__title {
-        color: #000000;
-        text-align: center; /* Centra el título*/
-        font-size: 2em; /* Aumentar el tamaño de fuente para dar énfasis */
-        margin-bottom: 1em; /*Añade algo de espacio debajo del título */
-      }
-      
-      .academic__courses {
-        display: flex; /* diseño de caja flexible para una mejor organización */
-        flex-wrap: wrap; /*Permitir que los cursos se ajusten a varias líneas si es necesario */
-        justify-content: center; /* Centrar los cursos horizontalmente*/
-        align-items: flex-start; /* Alinear cursos verticalmente desde arriba */
-      }
-      
-      .academic__courses__box {
-        margin: 1em; /* Agregar espacio entre cada cuadro de curso*/
-        flex-basis: 25%; /* Establece el ancho de cada cuadro de curso al 25% del contenedor */
-        background-color: white; /*Fondo blanco para cada cuadro*/
-        padding: 1em; /*Agrega algo de relleno dentro de las cajas*/
-        border-radius: 5px; /* Esquinas redondeadas para una apariencia más suave*/
-        box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1); /* Añade una sombra sutil*/
-      }
-      
-      .academic__courses__list {
-        list-style: none; /* Eliminar viñetas predeterminadas*/
-        padding: 0; /* Remove default list padding */
-      }
-      
-      .academic__courses__item__img {
-        display:flex;
-        flex-direction:row;
-        width: 100px; /* Set the width of the institution logo */
-        height: auto; /* Maintain aspect ratio */
-        margin-bottom: 1em;
-       /* box-shadow: 15px 15px 15px 15px rgb(0,0,0,5); /* Add some space below the logo */
-      }
-      
-      .academic__courses__item__title {
-        font-weight: bold; /* Make the title bolder */
-        margin-bottom: 0.5em; /* Add some space below the title */
-      }
-      
-      .academic__courses__item__subtitle {
-        font-size: 0.8em; /* Reduce subtitle font size */
-        color: #666; /* Lighter color for subtitle */
-      }
-      
+.hobbies__name {
+  font-weight: bold;
+}
 
+/* Academic Experience */
+section.academic {
+  background-color: var(--color-background-section);
+  padding: 2em 0;
+}
 
-/* experiencia*/
+.academic__title {
+  text-align: center;
+  font-size: 2em;
+  margin-bottom: 1em;
+}
 
-section.experience{
-  
-    background-color: #fff; /* White background */
-    padding: 0; /* Add some padding for spacing */
-  }
-  
-  .experience__section__title {
-    text-align: center; /* Center the title */
-    font-size: 2em; /* Increase font size for emphasis */
-    margin-bottom: 1em; /* Add some space below the title */
-  }
-  
-  .experiencie__box {
-    display: flex; /* Use a flexbox layout for better organization */
-    flex-wrap: wrap; /* Allow projects to wrap onto multiple lines if needed */
-    justify-content: center; /* Center the projects horizontally */
-    align-items: flex-start; /* Align projects vertically from the top */
-    margin-bottom: 2em; /* Add space between each project box */
-  }
-  
-  .experience__img {
-    width: 300px; /* Set the width of the project image */
-    height: auto; /* Maintain aspect ratio */
-    margin-right: 1em; /* Add space between the image and the information */
-  }
-  
-  .experience__info-container {
-    flex: 1; /* Allow the info container to take up the remaining space */
-  }
-  
-  .experience__title {
-    font-size: 1.5em; /* Increase font size for title */
-    margin-bottom: 0.5em; /* Add some space below the title */
-  }
-  
-  .experience__text {
-    font-size: 0.9em; /* Smaller font size for text */
-    margin-bottom: 0.5em; /* Add some space below the text */
-  }
-  
-  .experience__description {
-    display: flex; /* Use a flexbox layout for buttons */
-    justify-content: space-between; /* Distribute buttons evenly */
-  }
-  
-  .experience__repo, .experience__demo {
-    display: inline-block; /* Make buttons display inline */
-    margin: 0.5em; /* Add some space between buttons */
-  }
-  
-  
+.academic__courses {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
 
+.academic__courses__box {
+  margin: 1em;
+  flex-basis: 25%;
+  background-color: #fff;
+  padding: 1em;
+  border-radius: 5px;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+}
 
-/*Contacto*/
-#contacto{
+.academic__courses__list {
+  padding: 0;
+}
+
+.academic__courses__item__img {
+  width: 100px;
+  height: auto;
+  margin-bottom: 1em;
+}
+
+.academic__courses__item__title {
+  font-weight: bold;
+  margin-bottom: 0.5em;
+}
+
+.academic__courses__item__subtitle {
+  font-size: 0.8em;
+  color: #666;
+}
+
+/* Professional Experience */
+section.experience {
+  background-color: #fff;
+  padding: 2em 0;
+}
+
+.experience__section__title {
+  text-align: center;
+  font-size: 2em;
+  margin-bottom: 1em;
+}
+
+.experience__box {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-bottom: 2em;
+}
+
+.experience__img {
+  width: 300px;
+  height: auto;
+  margin-right: 1em;
+}
+
+.experience__info-container {
+  flex: 1;
+}
+
+.experience__title {
+  font-size: 1.5em;
+  margin-bottom: 0.5em;
+}
+
+.experience__text {
+  font-size: 0.9em;
+  margin-bottom: 0.5em;
+}
+
+.experience__description {
+  display: flex;
+  justify-content: center;
+}
+
+.experience__repo, .experience__demo {
+  display: inline-block;
+  margin: 0.5em;
+}
+
+/* Contact Section */
+#contacto {
   display: flex;
   flex-direction: column;
   align-items: center;
-  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1); 
-
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
 }
+
 section.formcontato {
-  background-color: #f0f0f0; /* Light gray background */
-  padding: 50px 0; /* Top and bottom padding */
-  display: flex; /* Arrange contact info and form side-by-side */
+  background-color: #f0f0f0;
+  padding: 50px 0;
+  display: flex;
   justify-content: space-between;
-  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);  /* Space elements horizontally */
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 .formcontato__contacto {
-  display: flex; /* Arrange image and text container within contact section */
-  width: 40%; /* Allocate 40% of the space for contact info */
+  display: flex;
+  width: 40%;
 }
 
-
-
 .formcontato__text {
-  width: 100%; /* Set the text container width to fill the remaining space */
-  box-shadow:   2px 2px 5px rgba(0, 0, 1, 0.1); 
+  width: 100%;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
   border-radius: 2%;
-  padding: 0%;
-
 }
 
 .formcontato__title {
-  font-size: 2em; /* Increase font size for title */
+  font-size: 2em;
   margin-bottom: 1em;
-  color: var(--cor-de-fundo);
+  color: var(--color-background);
 }
 
 .formcontato__subtext {
-  font-size: 1.2em; /* Set a smaller size for subtitle */
+  font-size: 1.2em;
   margin-bottom: 1em;
-  color:rgb(106, 115, 115);
-  
+  color: rgb(106, 115, 115);
 }
 
 .formcontato__form {
-  display: flex; /* Arrange form elements in a row */
-  flex-direction: column; /* Stack elements vertically */
-  width: 100%; /* Make the form fill the container width */
+  display: flex;
+  flex-direction: column;
+  width: 100%;
 }
 
 .formcontato__input,
 .formcontato__textarea {
-  padding: 10px; /* Add padding to input and textarea */
-  margin-bottom: 15px; /* Add space between form elements */
-  border: 1px solid #ccc; /* Add a thin border */
+  padding: 2%;
+  margin-bottom: 1.5%;
+  border: 1px solid #ccc;
   border-radius: 5px;
-  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);  /* Rounded corners for a softer look */
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
 }
 
 .formcontato__textarea {
-  resize: vertical; /* Allow users to resize the textarea vertically */
+  resize: vertical;
 }
 
 .formcontato__botao {
-  background-color: #333; /* Set button background color */
-  color: var(--cor-de-fundo); /* Set button text color */
-  padding: 10px 20px; /* Add padding to button */
-  border: none; /* Remove default button border */
-  border-radius: 5px; /* Rounded corners for button */
-  cursor: pointer; /* Indicate clickable element */
+  background-color: var(--color-button-background);
+  color: var(--color-button-text);
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
 }
 
 .formcontato__botao:hover {
-  background-color: #444; /* Change button background color on hover */
+  background-color: #444;
 }
 
-/*footeer*/
-
-
-
-  section.footer {
-    height: 100%;
-    background-color: #333; /* Dark gray background */
-    color: #fff; /* Set text color to white */
-    padding: 20px 0; /* Top and bottom padding */
-    text-align: center; /* Center footer content */
-  }
-  
-  .footer__rodape {
-    margin: 0 auto; /* Center the footer content horizontally */
-    width: 50%; /* Set a maximum width for the footer content */
-  }
-  
-  .footer__rodape p {
-    margin-bottom: 10px; /* Add space between paragraphs */
-    font-size: 0.8em; /* Smaller font size for footer text */
-  }
-
-
-/* Vamos a desafiarnos trabajando con responsividad?
-Utiliza las referencias de los breakpoints @media abajo */
-
-
-/*Tablet*/
-@media screen and (min-width: 768px) and (max-width: 1024px) {
-  /* Sección Menu */
-  #Portafolio {
-    font-family: 'Arial', sans-serif;
-    margin: 0;
-    padding: 0;
-    
-    
-  }
-  
-  a ,h2,h3,h4{
-    color: #333;
-    text-decoration: none;
-    padding: 0;
-    margin: 0;
-  }
-  .tudo{
-    width: auto;
-  }
-
- .menu_list{
-  color: var(--cor-de-fundo);
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 15px;
-    
-  }
-  
-  img.title__profile {
-    
-    display: block;
-    direction: none;
-    padding: 0;
-    margin: 0;
-  }
-  .title__bio{
-    list-style: none;
-    margin: 0;
-    padding: 0;
-  }
-  
-  #generatePDFButton{
-    display: flex;
-    max-width: 5%;
-    height: auto;
-    padding: 0%;
-    text-align: end;
-  }
-  /* Header */
-  header {
-    
-    padding: 20px 0;
-    text-align: center;
-  }
-  
-  .header__logo {
-    display: inline-block;
-    margin-right: 20px;
-  }
-  
-  .header__logo img {
-    width: 100px;
-    height: auto;
-  }
-  
-  .header__menu {
-    display: inline-block;
-  }
-  
-  .header__menu ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-  }
-  
-  .header__menu li {
-    display: inline-block;
-    margin-right: 20px;
-  }
-  
-  /* Hero Section */
- 
-  .title__container{
-    text-align: start;
-    font-size: 15px;
-    font-weight: bold;
-    padding: 0%;
-    margin: 0%;
-  }
-  
-  .title__subsection {
-    font-size: 0%;
-  }
-  
-  /* About Section */
-  .about {
-    padding: 20px;
-  }
-  
-  .about__title {
-    font-size: 30px;
-    font-weight: bold;
-    margin-bottom: 20px;
-  }
-  
-  .about__text {
-    font-size: 16px;
-    line-height: 1.5;
-  }
-  
-  /* Skills Section */
-  .skills {
-    padding: 20px;
-  }
-  
-  .skills__title {
-    font-size: 30px;
-    font-weight: bold;
-    margin-bottom: 20px;
-  }
-  
-  .skills__line {
-    display: flex;
-    flex-wrap: wrap;
-    margin-bottom: 15px;
-  }
-  
-  .skills__box {
-    background-color: #fff;
-    padding: 10px;
-    margin-right: 10px;
-    border-radius: 5px;
-    text-align: center;
-  }
-  
-  .skills__box h4 {
-    font-size: 18px;
-    margin-bottom: 5px;
-  }
-  
-  /* Hobbies Section */
-  .hobbies {
-    padding: 20px;
-  }
-  
-  .hobbies__title {
-    font-size: 30px;
-    font-weight: bold;
-    margin-bottom: 20px;
-  }
-  
-  .hobbies__line {
-    display: flex;
-    flex-wrap: wrap;
-    margin-bottom: 15px;
-  }
-  
-  .hobbies__box {
-    
-    padding: 10px;
-    margin-right: 10px;
-    border-radius: 5px;
-    text-align: center;
-  }
-  
-  .hobbies__box h4 {
-    font-size: 18px;
-    margin-bottom: 5px;
-  }
-  
-  /* Academic Formation Section */
-  .academic {
-    display: flex;
-    flex-direction: column;
-    font-family: 20px;
-  }
-  
-  .academic__title {
-    font-size: 30px;
-    font-weight: bold;
-    margin-bottom: 20px;
-  }
-  
-  .academic__courses {
-    display: flex;
-    flex-direction: column;
-    margin: 10px;
-    flex-wrap: wrap;
-    justify-content: space-between;
-  }
-  
-  .academic__courses__box {
-    display: flex;
-    flex-direction: column;
-    align-content: center;
-    flex-wrap: nowrap;
-    align-content: space-around;
-    align-items: baseline;
-    justify-content: space-evenly;
-    margin: 5px;
-    padding: 100px;
-    align-items: center;
-}
-}
-.formcontato__text{
-  text-decoration: none;
-  box-shadow:none;
-}
-
-
-/*Mobile*/
-@media screen and (min-width: 425px) and(max-width:768) {
-  body {
-    font-size: 16px; /* Base font size */
-  }
-  
-  h1
-/*Menu*/
-.menu__list{
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 15px;
-}
-
-
-
-/*Titulo*/
-.header_menu {
-  display: none; /* Hide the original menu */
-}
-.section_menu{
-  width: 100%;
-  
-
-}
-
-.menu-button {
-  display: block; /* Show the menu button */
-  width: 30px;
-  height: 30px;
+/* Footer */
+section.footer {
   background-color: #333;
   color: #fff;
+  padding: 20px 0;
   text-align: center;
-  line-height: 30px;
-  cursor: pointer;
-}
-.title_container {
-  flex-direction: row; /* Arrange profile image and bio side-by-side */
+  font-size: 0.9em;
 }
 
-.title_div {
-  width: 45%; /* Allocate more space for the profile image */
+@media (max-width: 768px) {
+  section.menu {
+    
+    align-items: flex-start;
+    height: 100hv;
+    width: 100%;
+  }
+
+  .menu__list {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .title__network {
+    flex-direction: column;
+  }
+
+  .skills__line, .hobbies__line {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .experience__box {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .experience__img {
+    margin-bottom: 1em;
+  }
+
+  .formcontato__contacto {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .formcontato__form {
+    width: 100%;
+  }
 }
 
-img.title_profile {
-  width: 180px;
-  height: 180px; /* Adjust profile image size */
-}
+@media  (max-width: 480px) {
+  .title__profile {
+    height: 200px;
+    width: 200px;
+  }
 
-.title_bio,
-.title_subsection {
-  width: 50%; /* Allocate half of the space for bio and network sections */
-  margin-right: 0; /* Remove right margin for a clean layout */
-  padding: 20px; /* Adjust padding for better readability */
-}
+  .skills__box, .hobbies__box {
+    width: 80%;
+  }
 
-/*Sección sobre mi*/
-
-/*Skills*//*Hobbies*/
-.skills__line,
-.hobbies__line {
-  flex-wrap: wrap; /* Wrap skills/hobbies onto multiple lines if needed */
-}
-
-.skills__box,
-.hobbies__box {
-  margin: 10px; /* Increase spacing between skills/hobbies boxes */
-}
-
- 
-/*Formación Académica*/
-.academic__courses {
-  flex-direction: row; /* Arrange courses side-by-side */
-}
-
-.academic__courses__box {
-  flex-basis: 45%; /* Allocate more space for each course container */
-  margin: 15px; /* Adjust margin for spacing */
-}
-
-/*Experiencia Profesional*/
-.experiencie__box {
-  flex-direction: row; /* Arrange project image and information side-by-side */
-}
-
-.experience__img {
-  width: 220px; /* Adjust image size for tablets */
-  margin-right: 20px; /* Increase spacing between image and info */
-}
-
- /*Contacto*/
- .formcontato {
-  flex-direction: column; /* Stack contact form and image vertically */
-}
-
-.formcontato__contacto,
-.formcontato__form {
-  width: 100%; /* Make form and image take full width */
-}
-
-.formcontato__img {
-  margin-bottom: 30px; /* Adjust margin for spacing between image and form */
-}
-/*Footer*/
-
+  .academic__courses__box {
+    flex-basis: 100%;
+  }
 }
