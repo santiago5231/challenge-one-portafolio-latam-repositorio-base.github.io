@@ -6,7 +6,7 @@ jQuery(document).ready(function(){
   $('#generatePDFButton').click(function()
   {
  
-  window.print();
+  window.location.hrefhttps:'//drive.google.com/uc?export=download&id=1FTll1lAoZwnv2R6uIJFMebiFpiZqKxjK';
 
   });
 });
