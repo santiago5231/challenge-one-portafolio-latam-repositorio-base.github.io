@@ -16,26 +16,7 @@
     updateNavButtons();
 }
 
-// Función para actualizar visibilidad de botones
-function updateNavButtons() {
-    const container = document.querySelector('.academic__courses');
-    const backBtn = document.querySelector('.prev');
-    const forwardBtn = document.querySelector('.next');
 
-    // Mostrar u ocultar botón de retroceso según la posición actual de scroll
-    if (container.scrollLeft > 0) {
-        backBtn.style.display = 'block';
-    } else {
-        backBtn.style.display = 'none';
-    }
-
-    // Mostrar u ocultar botón de avanzar según la posición actual de scroll
-    if (container.scrollLeft < container.scrollWidth - container.clientWidth) {
-        forwardBtn.style.display = 'block';
-    } else {
-        forwardBtn.style.display = 'none';
-    }
-}
 
 // Event listeners para los botones de retroceso y continuar
 document.querySelector('.prev').addEventListener('click', () => moveSlide(-1));
